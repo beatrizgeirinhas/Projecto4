@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Project 4 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/flexboxgrid.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/hero.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/gap_f.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/nav.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+  <section class="section " id="background2">
+    <div class="container container-fluid">
+      <div class="row between-xs end-xs">
+
+        <div class="col-xs-2 block m_top_big" data-aos="zoom-in">
+          <img class="m_right_small" src="assets/images/money.png" width="24">
+          <a id="clicks" class="oswald-bold m_right_med">5</a>
+          <img src="assets/images/life.png" width="24.35">
+          <img src="assets/images/life.png" width="24.35">
+          <img src="assets/images/life.png" width="24.35">
+        </div>
+
+        <nav>
+          <div class="row middle-xs around-xs">
+          <div class="col-xs-12 list ">
+          <a class="oswald-extraligth white" href="assets/html/sala/sala.html">SALA DE REFEIÇÕES </a>
+          <a class="oswald-extraligth white" href="casa_banho.html">CASA DE BANHO</a>
+          <a class="oswald-extraligth white" href="garagem.html">GARAGEM</a>
+          </div>
+        </div>
+        </nav>
+
+        <div class="nav-button">
+          <div class="nav-button-line"></div>
+          <div class="nav-button-line"></div>
+          <div class="nav-button-line"></div>
+        </div>
+
+      </div>
+      <div class="row center-xs middle-xs" data-aos="zoom-in">
+        <div class="col-xs-12">
+          <img class="m_right_big m_top_med home" src="assets/images/home.png" width="455.26">
+          <a href="assets/html/sala/sala.html">
+            <img data-aos="zoom-in" data-aos-delay="300" class="pointer1" src="assets/images/pointer.png" width="34.53">
+          </a>
+          <a href="assets/html/casa_banho/casa_banho.html">
+            <img data-aos="zoom-in" data-aos-delay="400" class="pointer2" src="assets/images/pointer.png" width="34.53">
+          </a>
+          <a href="assets/html/garagem/garagem.html">
+            <img data-aos="zoom-in" data-aos-delay="500" class="pointer3" src="assets/images/pointer.png" width="34.53">
+          </a>
+        </div>
+      </div>
+      <div class="row end-xs" >
+        <div class="col-xs-12">
+          <div class="popup" onclick="myFunction()">
+            <img src="assets/images/question.png" width="49">
+            <span class="popuptext oswald-ligth" id="myPopup" >A Venezuela é um país da América, constituido por uma parte continental e um grande número de pequenas ilhas. O país vive, neste momento, em plena rota de colisão onde existem pessoas simplesmente a sobreviver, em vez de viver. A casa é, aqui, um simbolo de ubiquidade. Todos têm uma, independentemente da sua noção ser diferente de pessoa para pessoa. Cada divisão representa um tema diferente, sendo que cada uma está associada a esse tema. Começas com 3 vidas e 5 bolívares. Estes dados vão variando dependendo da tua interação com os gráficos.
+            <br> <b> Será que consegues viver nesta casa venezuelana?</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+  // When the user clicks on div, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+</script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/index.js"></script>
+
+</html>
