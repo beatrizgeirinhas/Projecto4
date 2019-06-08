@@ -29,12 +29,12 @@
         </div>
         <nav>
           <div class="row middle-xs around-xs">
-          <div class="col-xs-12 list ">
-          <a class="oswald-extraligth white" href="sala.html">SALA DE REFEIÇÕES </a>
-          <a class="oswald-extraligth white" href="casa_banho.html">CASA DE BANHO</a>
-          <a class="oswald-extraligth white" href="garagem.html">GARAGEM</a>
+            <div class="col-xs-12 list ">
+              <a class="oswald-extraligth white" href="sala.html">SALA DE REFEIÇÕES </a>
+              <a class="oswald-extraligth white" href="casa_banho.html">CASA DE BANHO</a>
+              <a class="oswald-extraligth white" href="garagem.html">GARAGEM</a>
+            </div>
           </div>
-        </div>
         </nav>
 
         <div class="nav-button">
@@ -42,19 +42,127 @@
           <div class="nav-button-line"></div>
           <div class="nav-button-line"></div>
         </div>
-
       </div>
       <div class="row">
         <div class="col-xs-12 backrground_image" data-aos="zoom-in">
-          <img src="../../images/sala/pratos.png" width="100%">
+          <div id = "div1" style="display:block"><img src="../../images/sala/pratos.png" width="100%"/></div>
+<div id = "div2" style="display:none"><img src="../../images/sala/pratos2.png" width="100%"/></div>
+<div id = "div3" style="display:none"><img src="../../images/sala/pratos3.png" width="100%"/></div>
+<div id = "div4" style="display:none"><img src="../../images/sala/pratos4.png" width="100%"/></div>
+<div id = "div5" style="display:none"><img src="../../images/sala/pratos5.png" width="100%"/></div>
         </div>
       </div>
-      <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-</div>
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <hr class="m_top_big">
+          <div class="row center-xs">
+            <div class="col-xs-1">
+              <figure class="active_ball"></figure>
+            </div>
+            <div class="col-xs-0">
+              <figure class="small_ball small_ball_margin1"></figure>
+            </div>
+            <div class="col-xs-2">
+              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace()"></figure>
+            </div>
+            <div class="col-xs-0">
+              <figure class="small_ball small_ball_margin1"></figure>
+            </div>
+            <div class="col-xs-2">
+              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace2()"></figure>
+            </div>
+            <div class="col-xs-0">
+              <figure class="small_ball small_ball_margin2"></figure>
+            </div>
+            <div class="col-xs-2">
+              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace3()"></figure>
+            </div>
+            <div class="col-xs-0">
+              <figure class="small_ball small_ball_margin1"></figure>
+            </div>
+            <div class="col-xs-1">
+              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace4()"></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="row center-xs">
+            <div class="col-xs-1">
+              <p class="oswald-ligth year">2004</p>
+            </div>
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-2">
+              <p class="oswald-ligth year">2007</p>
+            </div>
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-2">
+              <p class="oswald-ligth year">2010</p>
+            </div>
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-2">
+              <p class="oswald-ligth year">2013</p>
+            </div>
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-1">
+              <p class="oswald-ligth year">2016</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </body>
+<script>
+  // When the user clicks on div, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+</script>
+
+<script type = "text/javascript">
+function replace() {
+document.getElementById("div1").style.display="none";
+document.getElementById("div3").style.display="none";
+document.getElementById("div4").style.display="none";
+document.getElementById("div5").style.display="none";
+document.getElementById("div2").style.display="block";
+document.getElementsByClassName("active_ball").style.background="black";
+}
+</script>
+<script type = "text/javascript">
+function replace2() {
+document.getElementById("div1").style.display="none";
+document.getElementById("div4").style.display="none";
+document.getElementById("div5").style.display="none";
+document.getElementById("div2").style.display="none";
+document.getElementById("div3").style.display="block";
+}
+</script>
+<script type = "text/javascript">
+function replace3() {
+document.getElementById("div1").style.display="none";
+document.getElementById("div5").style.display="none";
+document.getElementById("div2").style.display="none";
+document.getElementById("div3").style.display="none";
+document.getElementById("div4").style.display="block";
+}
+</script>
+<script type = "text/javascript">
+function replace4() {
+document.getElementById("div1").style.display="none";
+document.getElementById("div2").style.display="none";
+document.getElementById("div3").style.display="none";
+document.getElementById("div4").style.display="none";
+document.getElementById("div5").style.display="block";
+}
+</script>
 <script src="../../js/aos.js"></script>
 <script src="../../js/index.js"></script>
 <script src="../../js/slider.js"></script>
