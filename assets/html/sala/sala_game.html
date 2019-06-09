@@ -57,31 +57,31 @@
           <hr class="m_top_big">
           <div class="row center-xs">
             <div class="col-xs-1">
-              <figure class="active_ball"></figure>
+              <figure id="active_ball" class="active_ball"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin1"></figure>
             </div>
             <div class="col-xs-2">
-              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace()"></figure>
+              <figure id="inactive_ball1" class="inactive_ball inactive_ball_margin1" onclick = "replace(); this.onclick=null;"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin1"></figure>
             </div>
             <div class="col-xs-2">
-              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace2()"></figure>
+              <figure id="inactive_ball2" class="inactive_ball inactive_ball_margin1" onclick = "replace2() ; this.onclick=null;"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin2"></figure>
             </div>
             <div class="col-xs-2">
-              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace3()"></figure>
+              <figure id="inactive_ball3" class="inactive_ball inactive_ball_margin1" onclick = "replace3() ; this.onclick=null;"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin1"></figure>
             </div>
             <div class="col-xs-1">
-              <figure class="inactive_ball inactive_ball_margin1" onclick = "replace4()"></figure>
+              <figure id="inactive_ball4" class="inactive_ball inactive_ball_margin1" onclick = "replace4() ; this.onclick=null;"></figure>
             </div>
           </div>
         </div>
@@ -133,9 +133,24 @@ document.getElementById("div3").style.display="none";
 document.getElementById("div4").style.display="none";
 document.getElementById("div5").style.display="none";
 document.getElementById("div2").style.display="block";
-document.getElementsByClassName("active_ball").style.background="black";
+document.getElementById("active_ball").style.background="black";
+document.getElementById("inactive_ball1").style.background="#ffd949";
+document.getElementById("active_ball").style.cursor="auto";
 }
 </script>
+<script type = "text/javascript">
+function replace5() {
+document.getElementById("div1").style.display="none";
+document.getElementById("div2").style.display="none";
+document.getElementById("div4").style.display="none";
+document.getElementById("div5").style.display="none";
+document.getElementById("div3").style.display="block";
+document.getElementById("active_ball").style.background="black";
+document.getElementById("inactive_ball2").style.background="#ffd949";
+document.getElementById("active_ball").style.cursor="auto";
+}
+</script>
+
 <script type = "text/javascript">
 function replace2() {
 document.getElementById("div1").style.display="none";
@@ -143,6 +158,11 @@ document.getElementById("div4").style.display="none";
 document.getElementById("div5").style.display="none";
 document.getElementById("div2").style.display="none";
 document.getElementById("div3").style.display="block";
+document.getElementById("active_ball").style.background="black";
+document.getElementById("inactive_ball1").style.background="black";
+document.getElementById("inactive_ball2").style.background="#ffd949";
+document.getElementById("inactive_ball1").style.cursor="auto";
+
 }
 </script>
 <script type = "text/javascript">
@@ -152,6 +172,13 @@ document.getElementById("div5").style.display="none";
 document.getElementById("div2").style.display="none";
 document.getElementById("div3").style.display="none";
 document.getElementById("div4").style.display="block";
+document.getElementById("inactive_ball2").style.background="black";
+document.getElementById("inactive_ball4").style.background="black";
+document.getElementById("inactive_ball2").style.background="black";
+document.getElementById("inactive_ball1").style.background="black";
+document.getElementById("active_ball").style.background="black";
+document.getElementById("inactive_ball3").style.background="#ffd949";
+document.getElementById("inactive_ball2").style.cursor="auto";
 }
 </script>
 <script type = "text/javascript">
@@ -161,8 +188,16 @@ document.getElementById("div2").style.display="none";
 document.getElementById("div3").style.display="none";
 document.getElementById("div4").style.display="none";
 document.getElementById("div5").style.display="block";
+document.getElementById("inactive_ball3").style.background="black";
+document.getElementById("inactive_ball2").style.background="black";
+document.getElementById("inactive_ball1").style.background="black";
+document.getElementById("active_ball").style.background="black";
+document.getElementById("inactive_ball4").style.background="#ffd949";
+document.getElementById("inactive_ball3").style.cursor="auto";
 }
 </script>
+
+
 <script src="../../js/aos.js"></script>
 <script src="../../js/index.js"></script>
 <script src="../../js/slider.js"></script>
