@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Project 4 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../assets/css/wc/wc.css" type="text/css">
+  <link rel="stylesheet" href="../../../assets/css/wc/wc2.css" type="text/css">
+  <link rel="stylesheet" href="../../../assets/css/flexboxgrid.min.css" type="text/css">
+  <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../../assets/css/hero.css" type="text/css">
+  <link rel="stylesheet" href="../../../assets/css/gap_f.css" type="text/css">
+  <link rel="stylesheet" href="../../../assets/css/nav.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<style>
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+}
+.cnt223 a {
+  text-decoration: none;
+}
+.popup {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  z-index: 101;
+}
+.cnt223 {
+  min-width: 600px;
+  width: 600px;
+  min-height: 150px;
+  margin: 100px auto;
+  background: #f3f3f3;
+  position: relative;
+  z-index: 103;
+  padding: 35px 40px;
+  border: 10px solid #000000;
+  box-shadow: 0 2px 5px #000;
+}
+.cnt223 p {
+  clear: both;
+  color: #555555;
+  /* text-align: justify; */
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.cnt223 p a {
+  color: #ffd949;
+  font-weight: bold;
+}
+.cnt223 .x {
+  float: right;
+  height: 35px;
+  left: 22px;
+  position: relative;
+  top: -25px;
+  width: 34px;
+}
+.cnt223 .x:hover {
+  cursor: pointer;
+}
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<script type='text/javascript'>
+  $(function() {
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function() {
+      $('.popup').hide();
+      overlay.appendTo(document.body).remove();
+      return false;
+    });
+
+
+
+
+    $('.x').click(function() {
+      $('.popup').hide();
+      overlay.appendTo(document.body).remove();
+      return false;
+    });
+  });
+</script>
+
+<body>
+  <div class='popup row' data-aos="zoom-in">
+    <div class='cnt223 col-xs-12'>
+      <div class="row between-xs middle-xs">
+        <div class="col-xs-7">
+          <h1 class="oswald-bold">Instruções</h1>
+                  </div>
+                          <div class="col-xs-1">
+          <a href='' class='close'>
+            <img src="../../../assets/images/close.png" width="24.35">
+          </a>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-xs-12">
+      <p class="oswald-ligth m_top_big">
+        <b>A emigração de profissionais de saúde e a escassez de medicamentos têm afectado a capacidade da Venezuela em responder às emergências e epidemias. </b>
+        Carrega nos frascos e vê quantas vidas ganhas, ou perdes, dependendo do ano.
+        <br />
+        <br />
+      </p>
+    </div>
+  </div>
+    </div>
+  </div>
+  <section class="section " id="background2">
+    <div class="container container-fluid">
+      <div class="row between-xs middle-xs end-xs">
+        <div class="col-xs-2 block m_top_big">
+          <img class="m_right_small" src="../../../assets/images/money.png" width="24">
+          <a id="coins" class="oswald-bold m_right_med">5</a>
+          <img src="../../../assets/images/life.png" width="24.35">
+          <img src="../../../assets/images/life.png" width="24.35">
+          <img src="../../../assets/images/life.png" width="24.35">
+        </div>
+        <nav>
+          <div class="row middle-xs around-xs">
+            <div class="col-xs-12 list ">
+              <a class="oswald-extraligth white" href="../sala/sala.html">SALA DE REFEIÇÕES </a>
+              <a class="oswald-extraligth white" href="wc.html">CASA DE BANHO</a>
+              <a class="oswald-extraligth white" href="garagem.html">GARAGEM</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="nav-button">
+          <div class="nav-button-line"></div>
+          <div class="nav-button-line"></div>
+          <div class="nav-button-line"></div>
+        </div>
+      </div>
+
+      <div id="coins"></div>
+
+      <div class="row center-xs middle-xs">
+        <img class="m_right_big2 m_top_big2 img_m" src="../../../assets/images/wc/movel.png" width="390">
+      </div>
+    </div>
+
+    <div class="container2">
+      <h1 class="text">Esperança de vida á nascença <b style="font-size:12px;">77.1</b></h1>
+      <button id="button" type="button" class="button" style="background: url(../../../assets/images/wc/comp1.png);"></button>
+    </div>
+
+    <div class="container1">
+      <h1 class="text1">Esperança de vida á nascença <b style="font-size:12px;">77.1</b></h1>
+      <button id="button1" type="button" class="button1" style="background: url(../../../assets/images/wc/comp1.png);"></button>
+    </div>
+
+    <div class="container3">
+      <h1 class="text3">Esperança de vida á nascença <b style="font-size:12px;">78.8</b></h1>
+      <button id="button2" type="button" class="button3" style="background: url(../../../assets/images/wc/comp2.png);"></button>
+    </div>
+
+    <div class="container4">
+      <h1 class="text4">Esperança de vida á nascença <b style="font-size:12px;">78.5</b></h1>
+      <button id="button3" type="button" class="button4" style="background: url(../../../assets/images/wc/comp3.png);"></button>
+    </div>
+
+
+
+
+    </div>
+  </section>
+
+  <script>
+    $('.button').click(function() {
+      $('.text').toggleClass('shown');
+    });
+  </script>
+
+  <script>
+    $('.button1').click(function() {
+      $('.text1').toggleClass('shown');
+    });
+  </script>
+
+  <script>
+    $('.button3').click(function() {
+      $('.text3').toggleClass('shown');
+    });
+  </script>
+
+  <script>
+    $('.button4').click(function() {
+      $('.text4').toggleClass('shown');
+    });
+  </script>
+
+</body>
+
+<script src="../../js/aos.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/coins.js"></script>
+
+</html>

@@ -40,3 +40,252 @@ hr {
   margin-top: -10px;
   font-size: 12px;
 }
+
+.shop {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.shop .shoptext {
+  visibility: hidden;
+  width: 542px;
+  background-color: #fcfcfc;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 5px;
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-left: -842px;
+  padding: 40px;
+  text-align: left;
+}
+
+/* Popup arrow */
+.shop .shoptext::after {
+  content: "";
+  position: absolute;
+}
+
+/* Toggle this class - hide and show the popup */
+.shop .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.checkbox {
+  height: 70px;
+  width: 45%;
+  position: relative;
+  background: #fff;
+  display: inline-block;
+  margin: 15px 2% 15px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0 1px #252730;
+  cursor: pointer;
+}
+@media (max-width: 850px) {
+  .checkbox {
+    width: 80%;
+  }
+}
+.checkbox:hover {
+  background: #30c076;
+  color: white;
+}
+.checkbox:nth-child(1) .face {
+  background: url("https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/73.jpg");
+  background-size: cover;
+}
+.checkbox:nth-child(2) .face {
+  background: url("https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg");
+  background-size: cover;
+}
+.checkbox:nth-child(3) .face {
+  background: url("https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/73.jpg");
+  background-size: cover;
+}
+.checkbox:nth-child(4) .face {
+  background: url("https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/73.jpg");
+  background-size: cover;
+}
+
+.figure-container {
+  width: 20%;
+  height: 100%;
+  float: left;
+  padding: 10px 0 10px 15px;
+}
+@media (max-width: 450px) {
+  .figure-container {
+    width: 30%;
+  }
+}
+.figure-container .figure {
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white;
+}
+
+.text {
+  width: 80%;
+  height: 100%;
+  margin-left: 20%;
+  text-align: left;
+  position: relative;
+  padding: 30px 10px;
+}
+@media (max-width: 450px) {
+  .text {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
+.text span {
+  position: absolute;
+  left: 10px;
+}
+
+.submit {
+  width: 60%;
+  height: 60px;
+  margin: 30px auto;
+  background: #30c076;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0 1px #252730;
+  cursor: pointer;
+}
+.submit .text {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+.submit .text span {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.submit:hover {
+  background: #2bac69;
+}
+
+.clicked {
+  background: #30c076 !important;
+  color: white;
+}
+
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif;
+  font-size: 2.3em;
+  line-height: 50px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+}
+.cnt223 a {
+  text-decoration: none;
+}
+.popup {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  z-index: 101;
+}
+.cnt223 {
+  min-width: 600px;
+  width: 600px;
+  min-height: 150px;
+  margin: 100px auto;
+  background: #f3f3f3;
+  position: relative;
+  z-index: 103;
+  padding: 35px 40px;
+  border: 10px solid #000000;
+  box-shadow: 0 2px 5px #000;
+}
+.cnt223 p {
+  clear: both;
+  color: #555555;
+  /* text-align: justify; */
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.cnt223 p a {
+  color: #ffd949;
+  font-weight: bold;
+}
+.cnt223 .x {
+  float: right;
+  height: 35px;
+  left: 22px;
+  position: relative;
+  top: -25px;
+  width: 34px;
+}
+.cnt223 .x:hover {
+  cursor: pointer;
+}
+
+#popupCloseRight {
+  cursor: auto;
+  display: none;
+  background: #f3f3f3;
+  border: 10px solid #000000;
+  position: absolute;
+  box-shadow: 0 2px 5px #000;
+}
+.shop {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  padding: 0px;
+}
+.comprar {
+  background: #e5e5e5;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input .check {
+  background: #e5e5e5;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.massa {
+  position: absolute;
+  top: 22%;
+  left: 43%;
+}
+.massa img {
+  width: 30%;
+}

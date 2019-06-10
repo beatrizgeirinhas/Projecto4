@@ -14,15 +14,64 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<script type='text/javascript'>
+  $(function() {
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function() {
+      $('.popup').hide();
+      overlay.appendTo(document.body).remove();
+      return false;
+    });
+
+
+
+
+    $('.x').click(function() {
+      $('.popup').hide();
+      overlay.appendTo(document.body).remove();
+      return false;
+    });
+  });
+</script>
 
 <body>
+  <div class='popup row' data-aos="zoom-in">
+    <div class='cnt223 col-xs-12'>
+      <div class="row between-xs middle-xs">
+        <div class="col-xs-7">
+          <h1 class="oswald-bold">Instruções</h1>
+        </div>
+        <div class="col-xs-1">
+          <a href='' class='close'>
+            <img src="../../../assets/images/close.png" width="24.35">
+          </a>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-xs-12">
+          <p class="oswald-ligth m_top_big">
+            <b>Sabias que 87% da população na Venezuela é pobre e 61% vive em pobreza extrema? </b>Com o dinheiro que
+            tens, quantos alimentos consegues comprar para encher o teu prato?
+            Escolhe o ano que tencionas ver por ordem cronologica e vai ao carrinho comprar alimentos.
+            <br />
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
   <section class="section">
     <div class="container container-fluid">
       <div class="row between-xs middle-xs end-xs">
         <div class="col-xs-2 block m_top_big" data-aos="zoom-in">
           <img class="m_right_small" src="../../../assets/images/money.png" width="24">
-          <a id="clicks" class="oswald-bold m_right_med">5</a>
+          <a id="coins" class="oswald-bold m_right_med">5</a>
           <img src="../../../assets/images/life.png" width="24.35">
           <img src="../../../assets/images/life.png" width="24.35">
           <img src="../../../assets/images/life.png" width="24.35">
@@ -31,11 +80,14 @@
           <div class="row middle-xs around-xs">
             <div class="col-xs-12 list ">
               <a class="oswald-extraligth white" href="sala.html">SALA DE REFEIÇÕES </a>
-              <a class="oswald-extraligth white" href="casa_banho.html">CASA DE BANHO</a>
+              <a class="oswald-extraligth white" href="../casa_banho/wc.html">CASA DE BANHO</a>
               <a class="oswald-extraligth white" href="garagem.html">GARAGEM</a>
             </div>
           </div>
         </nav>
+        <a href="#popupCloseRight" onclick="popup()">
+          <img src="../../../assets/images/car.png" width="44.35">
+        </a>
 
         <div class="nav-button">
           <div class="nav-button-line"></div>
@@ -43,13 +95,186 @@
           <div class="nav-button-line"></div>
         </div>
       </div>
+
+      <div id="popupCloseRight" class="row center-xs middle-xs shop">
+        <div class="col-xs-12">
+          <div class="row between-xs center-xs">
+            <div class="col-xs-6">
+              <h1 class="oswald-bold">A tua lista</h1>
+            </div>
+            <div class="col-xs-2">
+              <a href="#" onclick="popupclose()"> <img src="../../../assets/images/close.png" width="24.35"></a>
+            </div>
+          </div>
+          <div id="content_check" class="row center-xs" style="display:block">
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Arroz
+                <input id="checkbox" type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Massa
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Ovos
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Carne
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Peixe
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Marisco
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div id="content_check2" class="row center-xs" style="display:none">
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Arroz
+                <input id="checkbox" type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Massa
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Ovos
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Carne
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Peixe
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Marisco
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div id="content_check3" class="row center-xs" style="display:none">
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Arroz
+                <input id="checkbox" type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Massa
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Ovos
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Carne
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Peixe
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Marisco
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div id="content_check4" class="row center-xs" style="display:none">
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Arroz
+                <input id="checkbox" type="checkbox" class="check" disabled >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Massa
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Ovos
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Carne
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Peixe
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Marisco
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div id="content_check5" class="row center-xs" style="display:none">
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Arroz
+                <input id="checkbox" type="checkbox" class="check" disabled >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Massa
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Ovos
+                <input type="checkbox" class="check" >
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-xs-3">
+              <label class="container oswald-ligth">Carne
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Peixe
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container oswald-ligth">Marisco
+                <input type="checkbox" class="check" disabled>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="row center-xs">
+            <div class="col-xs-3">
+              <div class="comprar m_top_big">
+                <p id="testbtn" class="oswald-reg" onclick="popupclose()">Comprar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="row">
         <div class="col-xs-12 backrground_image" data-aos="zoom-in">
-          <div id = "div1" style="display:block"><img src="../../images/sala/pratos.png" width="100%"/></div>
-<div id = "div2" style="display:none"><img src="../../images/sala/pratos2.png" width="100%"/></div>
-<div id = "div3" style="display:none"><img src="../../images/sala/pratos3.png" width="100%"/></div>
-<div id = "div4" style="display:none"><img src="../../images/sala/pratos4.png" width="100%"/></div>
-<div id = "div5" style="display:none"><img src="../../images/sala/pratos5.png" width="100%"/></div>
+          <div id="div1" style="display:block"><img src="../../images/sala/pratos.png" width="100%" /></div>
+          <div id="div2" style="display:none"><img src="../../images/sala/pratos2.png" width="100%" /></div>
+          <div id="div3" style="display:none"><img src="../../images/sala/pratos3.png" width="100%" /></div>
+          <div id="div4" style="display:none"><img src="../../images/sala/pratos4.png" width="100%" /></div>
+          <div id="div5" style="display:none"><img src="../../images/sala/pratos5.png" width="100%" /></div>
+          <div id="massa" class="massa" style="display:none"><img src="../../images/sala/massa.png"/></div>
         </div>
       </div>
       <div class="row center-xs">
@@ -63,25 +288,25 @@
               <figure class="small_ball small_ball_margin1"></figure>
             </div>
             <div class="col-xs-2">
-              <figure id="inactive_ball1" class="inactive_ball inactive_ball_margin1" onclick = "replace(); this.onclick=null;"></figure>
+              <figure id="inactive_ball1" class="inactive_ball inactive_ball_margin1" onclick="replace(); this.onclick=null;"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin1"></figure>
             </div>
             <div class="col-xs-2">
-              <figure id="inactive_ball2" class="inactive_ball inactive_ball_margin1" onclick = "replace2() ; this.onclick=null;"></figure>
+              <figure id="inactive_ball2" class="inactive_ball inactive_ball_margin1" onclick="replace2() ; this.onclick=null;"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin2"></figure>
             </div>
             <div class="col-xs-2">
-              <figure id="inactive_ball3" class="inactive_ball inactive_ball_margin1" onclick = "replace3() ; this.onclick=null;"></figure>
+              <figure id="inactive_ball3" class="inactive_ball inactive_ball_margin1" onclick="replace3() ; this.onclick=null;"></figure>
             </div>
             <div class="col-xs-0">
               <figure class="small_ball small_ball_margin1"></figure>
             </div>
             <div class="col-xs-1">
-              <figure id="inactive_ball4" class="inactive_ball inactive_ball_margin1" onclick = "replace4() ; this.onclick=null;"></figure>
+              <figure id="inactive_ball4" class="inactive_ball inactive_ball_margin1" onclick="replace4() ; this.onclick=null;"></figure>
             </div>
           </div>
         </div>
@@ -118,88 +343,94 @@
     </div>
   </section>
 </body>
+
 <script>
-  // When the user clicks on div, open the popup
-  function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
+function popup(){
+  document.getElementById("popupCloseRight").style.display="block";
+}
+</script>
+<script>
+function popupclose(){
+  document.getElementById("popupCloseRight").style.display="none";
+}
+</script>
+<script type="text/javascript">
+  function replace() {
+    document.getElementById("div1").style.display = "none";
+    document.getElementById("div3").style.display = "none";
+    document.getElementById("div4").style.display = "none";
+    document.getElementById("div5").style.display = "none";
+    document.getElementById("div2").style.display = "block";
+    document.getElementById("content_check").style.display = "none";
+    document.getElementById("content_check2").style.display = "block";
+    document.getElementById("active_ball").style.background = "black";
+    document.getElementById("inactive_ball1").style.background = "#ffd949";
+    document.getElementById("active_ball").style.cursor = "auto";
   }
 </script>
 
-<script type = "text/javascript">
-function replace() {
-document.getElementById("div1").style.display="none";
-document.getElementById("div3").style.display="none";
-document.getElementById("div4").style.display="none";
-document.getElementById("div5").style.display="none";
-document.getElementById("div2").style.display="block";
-document.getElementById("active_ball").style.background="black";
-document.getElementById("inactive_ball1").style.background="#ffd949";
-document.getElementById("active_ball").style.cursor="auto";
-}
-</script>
-<script type = "text/javascript">
-function replace5() {
-document.getElementById("div1").style.display="none";
-document.getElementById("div2").style.display="none";
-document.getElementById("div4").style.display="none";
-document.getElementById("div5").style.display="none";
-document.getElementById("div3").style.display="block";
-document.getElementById("active_ball").style.background="black";
-document.getElementById("inactive_ball2").style.background="#ffd949";
-document.getElementById("active_ball").style.cursor="auto";
-}
-</script>
+<script type="text/javascript">
+  function replace2() {
+    document.getElementById("div1").style.display = "none";
+    document.getElementById("div4").style.display = "none";
+    document.getElementById("div5").style.display = "none";
+    document.getElementById("div2").style.display = "none";
+    document.getElementById("div3").style.display = "block";
+    document.getElementById("content_check").style.display = "none";
+    document.getElementById("content_check2").style.display = "none";
+    document.getElementById("content_check3").style.display = "block";
+    document.getElementById("active_ball").style.background = "black";
+    document.getElementById("inactive_ball1").style.background = "black";
+    document.getElementById("inactive_ball2").style.background = "#ffd949";
+    document.getElementById("inactive_ball1").style.cursor = "auto";
 
-<script type = "text/javascript">
-function replace2() {
-document.getElementById("div1").style.display="none";
-document.getElementById("div4").style.display="none";
-document.getElementById("div5").style.display="none";
-document.getElementById("div2").style.display="none";
-document.getElementById("div3").style.display="block";
-document.getElementById("active_ball").style.background="black";
-document.getElementById("inactive_ball1").style.background="black";
-document.getElementById("inactive_ball2").style.background="#ffd949";
-document.getElementById("inactive_ball1").style.cursor="auto";
-
-}
+  }
 </script>
-<script type = "text/javascript">
-function replace3() {
-document.getElementById("div1").style.display="none";
-document.getElementById("div5").style.display="none";
-document.getElementById("div2").style.display="none";
-document.getElementById("div3").style.display="none";
-document.getElementById("div4").style.display="block";
-document.getElementById("inactive_ball2").style.background="black";
-document.getElementById("inactive_ball4").style.background="black";
-document.getElementById("inactive_ball2").style.background="black";
-document.getElementById("inactive_ball1").style.background="black";
-document.getElementById("active_ball").style.background="black";
-document.getElementById("inactive_ball3").style.background="#ffd949";
-document.getElementById("inactive_ball2").style.cursor="auto";
-}
+<script type="text/javascript">
+  function replace3() {
+    document.getElementById("div1").style.display = "none";
+    document.getElementById("div5").style.display = "none";
+    document.getElementById("div2").style.display = "none";
+    document.getElementById("div3").style.display = "none";
+    document.getElementById("div4").style.display = "block";
+    document.getElementById("content_check").style.display = "none";
+    document.getElementById("content_check2").style.display = "none";
+    document.getElementById("content_check3").style.display = "none";
+    document.getElementById("content_check4").style.display = "block";
+    document.getElementById("inactive_ball2").style.background = "black";
+    document.getElementById("inactive_ball4").style.background = "black";
+    document.getElementById("inactive_ball2").style.background = "black";
+    document.getElementById("inactive_ball1").style.background = "black";
+    document.getElementById("active_ball").style.background = "black";
+    document.getElementById("inactive_ball3").style.background = "#ffd949";
+    document.getElementById("inactive_ball2").style.cursor = "auto";
+  }
 </script>
-<script type = "text/javascript">
-function replace4() {
-document.getElementById("div1").style.display="none";
-document.getElementById("div2").style.display="none";
-document.getElementById("div3").style.display="none";
-document.getElementById("div4").style.display="none";
-document.getElementById("div5").style.display="block";
-document.getElementById("inactive_ball3").style.background="black";
-document.getElementById("inactive_ball2").style.background="black";
-document.getElementById("inactive_ball1").style.background="black";
-document.getElementById("active_ball").style.background="black";
-document.getElementById("inactive_ball4").style.background="#ffd949";
-document.getElementById("inactive_ball3").style.cursor="auto";
-}
+<script type="text/javascript">
+  function replace4() {
+    document.getElementById("div1").style.display = "none";
+    document.getElementById("div2").style.display = "none";
+    document.getElementById("div3").style.display = "none";
+    document.getElementById("div4").style.display = "none";
+    document.getElementById("div5").style.display = "block";
+    document.getElementById("content_check").style.display = "none";
+    document.getElementById("content_check2").style.display = "none";
+    document.getElementById("content_check3").style.display = "none";
+    document.getElementById("content_check4").style.display = "none";
+    document.getElementById("content_check5").style.display = "block";
+    document.getElementById("inactive_ball3").style.background = "black";
+    document.getElementById("inactive_ball2").style.background = "black";
+    document.getElementById("inactive_ball1").style.background = "black";
+    document.getElementById("active_ball").style.background = "black";
+    document.getElementById("inactive_ball4").style.background = "#ffd949";
+    document.getElementById("inactive_ball3").style.cursor = "auto";
+  }
 </script>
 
 
 <script src="../../js/aos.js"></script>
 <script src="../../js/index.js"></script>
-<script src="../../js/slider.js"></script>
-
+<script src="../../js/checkbox.js"></script>
+<script src="../../js/coins.js"></script>
+<script src="../../js/plate.js"></script>
 </html>
